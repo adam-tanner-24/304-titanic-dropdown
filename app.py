@@ -10,18 +10,18 @@ import plotly.graph_objs as go
 
 ###### Define your variables #####
 tabtitle = 'Titanic!'
-color1='#92A5E8'
-color2='#8E44AD'
-color3='#FFC300'
+color1='#e492e8'
+color2='#92e8e8'
+color3='#e8d492'
 sourceurl = 'https://www.kaggle.com/c/titanic'
-githublink = 'https://github.com/plotly-dash-apps/304-titanic-dropdown'
+githublink = 'https://github.com/adam-tanner-24/304-titanic-dropdown'
 
 
 ###### Import a dataframe #######
 df = pd.read_csv("https://raw.githubusercontent.com/austinlasseter/plotly_dash_tutorial/master/00%20resources/titanic.csv")
-df['Female']=df['Sex'].map({'male':0, 'female':1})
+df['Male']=df['Sex'].map({'male':1, 'female':0})
 df['Cabin Class'] = df['Pclass'].map({1:'first', 2: 'second', 3:'third'})
-variables_list=['Survived', 'Female', 'Fare', 'Age']
+variables_list=['Survived', 'Male', 'Fare', 'Age']
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
